@@ -1,0 +1,9 @@
+Tout d'abord le programme choisit au premier tour deux objectifs (les deux premiers). Le programme enregistre la ville de depart et d'arrivée, afin de calculer le plus court chemin entre les deux. C'est ce chemin là qu'on va essayer de prendre.
+
+Si ce n'est pas à nous de jouer, on attend que l'adversaire joue, et on obtient ce qu'il a fait comme move. Au cas où il claim un track, notre graphe des distances mets ce track en tant qu'indisponible (distance infinie). Le chemin qu'on veut avoir est aussi actualisé.
+
+Dans le reste de nos tours, le bot va s'emparer d'un track voulu si possible, sinon il va continuer a piocher jusqu'à avoir assez de cartes pour le faire. Si une carte de meme couleur que le track voulu est face up, le bot va la piocher. Sinon il pioche une carte face cachée.
+
+Probleme avec le code que je n'ai pas reussis à debugger: Les cartes face up ne s'actualisent pas, ce qui pose probleme quand il essaye d'en piocher alors que la couleur voulu n'y est plus. De plus, le jeu s'arrete lorsque le joueur tiens 12 cartes (cela est surement dû à un probleme avec les cartes du joueur, ourCards, et leur actualisation)
+
+
